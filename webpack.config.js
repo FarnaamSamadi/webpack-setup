@@ -36,4 +36,15 @@ module.exports = {
       template: "public/index.html",
     }),
   ],
+
+  devServer: {
+    static: {
+      directory: resolve(__dirname, "dist"),
+    },
+    port: 3001,
+    open: true,
+    hot: true,
+    compress: true,
+    historyApiFallback: true,
+  },
 };
