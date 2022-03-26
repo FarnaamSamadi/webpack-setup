@@ -1,0 +1,18 @@
+{
+  "name": "webpack-setup-22",
+  "version": "1.0.0",
+  "description": "My webpack configuration in 2022",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Farnaam Samadi",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
