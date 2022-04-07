@@ -13,7 +13,7 @@ module.exports = {
     path: resolve(__dirname, "dist"),
     filename: "[name]-[contenthash].js",
     clean: true,
-    assetModuleFilename: "[name][ext]",
+    assetModuleFilename: "images/[hash][ext][query]",
   },
 
   devtool: "source-map",
@@ -41,15 +41,21 @@ module.exports = {
       {
         test: /\.s?css$/,
         use: [
-          miniCssExtractPlugin.loader,
+          {
+            loader: miniCssExtractPlugin.loader,
+            options: { publicPatch: "" },
+          },
           "css-loader",
-          "sass-loader",
           "postcss-loader",
+          "sass-loader",
         ],
       },
       {
-        test: /\.(svg|png|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
+        test: /\.(svg|png|jpg|jpeg|gif)$/i, // svg treated as normal img not inline
+        type: "asset", // default size is 8kb
+        parser: {
+          dataUrlCondition: 30 * 1024, // make size between resource and inline 30kb
+        },
       },
     ],
   },
