@@ -7,6 +7,7 @@ specifiers:
   postcss: ^8.4.12
   postcss-loader: ^6.2.1
   postcss-preset-env: ^7.4.3
+  prettier: ^2.6.2
   sass: ^1.49.9
   sass-loader: ^12.6.0
   style-loader: ^3.3.1
@@ -21,6 +22,7 @@ devDependencies:
   postcss: 8.4.12
   postcss-loader: 6.2.1_postcss@8.4.12+webpack@5.70.0
   postcss-preset-env: 7.4.3_postcss@8.4.12
+  prettier: 2.6.2
   sass: 1.49.9
   sass-loader: 12.6.0_sass@1.49.9+webpack@5.70.0
   style-loader: 3.3.1_webpack@5.70.0
@@ -2503,6 +2505,12 @@ packages:
       nanoid: 3.3.1
       picocolors: 1.0.0
       source-map-js: 1.0.2
+    dev: true
+
+  /prettier/2.6.2:
+    resolution: {integrity: sha512-PkUpF+qoXTqhOeWL9fu7As8LXsIUZ1WYaJiY/a7McAQzxjk82OF0tibkFXVCDImZtWxbvojFjerkiLb0/q8mew==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
     dev: true
 
   /pretty-error/4.0.0:
